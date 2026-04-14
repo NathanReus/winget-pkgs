@@ -22,21 +22,23 @@ Tags:
 - heat-pump
 ReleaseNotes: |-
   The following new features and changes are included:
-  - The design temperature is automatically set to the standard outdoor temperature (DIN/TS 12831-1 Part 1: National supplements) for locations in Germany. For all other locations, the coldest temperature from the climate data set is displayed and can be adopted as the design temperature.
-  - The heating load and domestic hot water energy requirement are displayed in the project status.
-  - Projects can be loaded, created or the last projects can be opened from the start page.
-  - Elements can be shown and hidden on the interface to increase clarity.
-  - Change in display of full load hours: All hours in which the maximum utilisation was reached at least briefly are now counted as full load hours.
-  - Display of the source temperature for brine heat pumps in the sizing help diagram.
-  - Project report supplemented with annual domestic hot water energy requirement and design temperature.
-  - Search in database dialogue improved.
-  - Databases have been updated.
+  - New interface to SOLAR-COMPUTER GmbH for importing building data.
+  - New program language Italian.
+  - Operating times can now be defined for heating and domestic hot water.
+  - The results graphics are displayed in new colors.
+  - Access to the database has been accelerated; the database is now loaded when the program starts.
+  - The LM client has been updated.
+  - The databases have been updated.
   The following bugs have been fixed:
-  - Intersection point in sizing help diagram partially incorrect.
-  - Partial crashes after saving the project report.
-  - The tank database dialogue also displayed manufacturers that had no tanks.
-  - In the first simulation, the generator heat output was sometimes not set.
-  - Changes to the domestic hot water tank of the WPA 8 were not adopted.
+  - When exporting the project report, content was missing if the preview was turned off.
+  - Result graphics were displayed incorrectly, too large/too small.
+  - Result graphics contained empty data series.
+  - Tank losses were displayed incorrectly in the database dialog.
+  - Error message during installation (vcruntime140.dll not found).
+  - License was not released when logging out/shutting down Windows if GeoT*SOL was not closed beforehand.
+  - In the options, the automatic update check was not displayed correctly and changes were not saved.
+  - Own products were not transferred during a database update.
+  - Heat pump utilization was not displayed correctly in the result graphs.
 ReleaseNotesUrl: https://valentin-software.com/en/products/geotsol/#release-notes
 PurchaseUrl: https://shop.valentin-software.com/
 Documentations:

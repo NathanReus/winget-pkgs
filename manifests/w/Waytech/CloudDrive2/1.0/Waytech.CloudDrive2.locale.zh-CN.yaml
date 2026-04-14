@@ -1,5 +1,5 @@
 # Created with YamlCreate.ps1 Dumplings Mod
-# yaml-language-server: $schema=https://aka.ms/winget-manifest.locale.1.10.0.schema.json
+# yaml-language-server: $schema=https://aka.ms/winget-manifest.locale.1.12.0.schema.json
 
 PackageIdentifier: Waytech.CloudDrive2
 PackageVersion: "1.0"
@@ -13,7 +13,7 @@ PackageName: CloudDrive2
 PackageUrl: https://www.clouddrive2.com/download.html
 License: 专有软件
 LicenseUrl: https://www.clouddrive2.com/eula.html
-Copyright: © 2024 CloudDrive. All rights reserved.
+Copyright: © 2026 CloudDrive. All rights reserved.
 CopyrightUrl: https://www.clouddrive2.com/eula.html
 ShortDescription: CloudDrive 是一个强大的多云盘管理工具，为用户提供包含云盘本地挂载的一站式的多云盘解决方案。
 Description: |-
@@ -28,11 +28,14 @@ Tags:
 - 文件
 - 服务器
 ReleaseNotes: |-
-  1. 修复某些 OneDrive 账号类型无法获取账号 email，导致无法添加多个 OneDrive 账号的问题，如果你的 OneDrive 账号不显示用户名，请升级到此版本后删除 OneDrive 重新添加一次
-  2. 改进在网络故障或者网盘故障导致下载失败时的处理流程，更好地适应网络变化
-  3. 修复在个别情况下上传出错小概率可能导致系统死锁的问题
-  4. 其它 bug 修复、性能改进和界面调整
-ReleaseNotesUrl: https://github.com/cloud-fs/cloud-fs.github.io/releases/tag/v0.8.20
+  1. macOS 全新异步挂载引擎：直接与 macfuse 内核扩展通信， 支持完全异步并发，文件读取不再阻塞目录浏览，多个文件可同时读写，多线程同时从 FUSE 设备接收内核请求，避免单线程瓶颈导致的请求挤压，大幅改善 Finder 在大量文件操作时的流畅度；运行时动态检测 macfuse，未安装 macfuse 时给出错误提示而不是程序无法启动
+  2. 上传任务数据库从 PickleDB 迁移至 SQLite，重启后保持上传任务顺序
+  3. 修复在某些情况下，重启机器后多个备份任务状态被禁用，只能重启服务才能重新允许的问题
+  4. 离线下载支持.torrent 文件，可直接拖拽或者上传.torrent 文件，.torrent 文件会被解析成磁力链接后添加
+  5. 右键菜单新增云盘配置和文件夹磁盘缓存快捷入口，不再需要先打开属性面板才能设置云盘配置和磁盘缓存
+  6. 本地文件夹不再显示云盘配置和磁盘缓存配置
+  7. 其它性能改进、bug 修复和界面优化
+ReleaseNotesUrl: https://github.com/cloud-fs/cloud-fs.github.io/releases/tag/v1.0.5
 PurchaseUrl: https://www.clouddrive2.com/pricing.html
 ManifestType: locale
-ManifestVersion: 1.10.0
+ManifestVersion: 1.12.0

@@ -1,9 +1,8 @@
 automerge
-cspell
 denelon
+dkbennett
 Icm
 LOCALAPPDATA
 misclicks
-Repology
 stephengillie
 img
